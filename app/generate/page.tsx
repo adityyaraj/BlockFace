@@ -149,7 +149,7 @@ export default function GeneratePage() {
               )}
             </div>
           </div>
-          <p className="mt-1 text-black/30">*Note: generated skins are Outerbody, to use this turn off necessary settings in minecraft</p>
+          <p className="mt-1 text-black/30">*Note: Generated skins are Innerbody, to use this turn off necessary settings in minecraft</p>
         </div>
       </div>
     </main>

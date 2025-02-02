@@ -41,7 +41,7 @@ export default function Home() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-white leading-tight">
-            Don't Stress About Creativity</h1><h1 className="text-6xl font-bold text-pink-300 leading-tight">
+            Don&apos;t Stress About Creativity</h1><h1 className="text-6xl font-bold text-pink-300 leading-tight">
             Let AI Do the Work</h1><h1 className="text-4xl font-bold mb-6 text-white leading-tight">
             Get Your Unique Minecraft Skin
           </h1>

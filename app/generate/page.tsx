@@ -85,12 +85,6 @@ export default function GeneratePage() {
     }
   }
 
-  const versions: MinecraftVersion[] = [
-    { value: "1.8", label: "Minecraft 1.8" },
-    { value: "1.12", label: "Minecraft 1.12" },
-    { value: "1.16", label: "Minecraft 1.16" }
-  ]
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-8 md:p-20 relative">
       <div className="w-full max-w-4xl">

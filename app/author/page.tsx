@@ -1,5 +1,6 @@
 import { Github } from "lucide-react"
 import Link from "next/link"
+import Image from 'next/image';
 
 const AuthorCard = ({
   name,
@@ -10,7 +11,7 @@ const AuthorCard = ({
   <div className="bg-white/10 bg-opacity-20 backdrop-blur-md rounded-lg p-6 mb-8">
     <div className="flex items-center mb-4">
       <div className="w-16 h-16 bg-gray-300 rounded-full mr-4">
-      <img
+      <Image
         src={description}
         alt={name}
         className="w-16 h-16 rounded-full mr-4"

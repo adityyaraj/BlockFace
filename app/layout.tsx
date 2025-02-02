@@ -7,7 +7,7 @@ import type React from "react"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "PeelSkin : Minecraft Skin Generator",
+  title: "BlockFace : Minecraft Skin Generator",
   description: "Generate amazing Minecraft skins with AI",
 }
 

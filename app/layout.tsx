@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} min-h-screen relative`}>
-        <div className="fixed inset-0 bg-cover bg-center z-0" style={{ backgroundImage: "url('/bg1.jpg')" }}>
+        <div className="fixed inset-0 bg-cover bg-center z-0" style={{ backgroundImage: "url('/bg.jpg')" }}>
           <div className="absolute inset-0 bg-black opacity-60"></div>
         </div>
         <div className="relative z-10 min-h-screen">{children}</div>

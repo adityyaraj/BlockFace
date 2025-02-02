@@ -90,17 +90,18 @@ export default function GeneratePage() {
   ]
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 md:p-24 relative">
+    <main className="flex min-h-screen flex-col items-center justify-center p-8 md:p-20 relative">
       <div className="w-full max-w-4xl">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-left text-white">
+        <h1 className="text-5xl font-bold mb-6 text-center text-pink-300">
           Minecraft Skin Generator
         </h1>
         
-        <div className="bg-white/20 backdrop-blur-md rounded-lg p-6">
+        <div className="bg-white/20 backdrop-blur-md rounded-lg p-6 bg-white/60">
           <div className="flex justify-between items-center mb-4">
             <div className="flex space-x-4">
               <Button 
-                size="lg" 
+                size="lg"
+                className="bg-white text-black hover:bg-blue-300 hover:text-white"
                 onClick={generateSkin}
                 disabled={isGenerating}
               >
@@ -108,6 +109,7 @@ export default function GeneratePage() {
               </Button>
               <Button 
                 size="lg" 
+                className="bg-white text-black hover:bg-blue-300 hover:text-white"
                 onClick={() => setShowIn3D(!showIn3D)}
                 disabled={!skinURL}
               >
@@ -116,7 +118,7 @@ export default function GeneratePage() {
             </div>
             
             <Select>
-              <SelectTrigger className="w-[180px]">
+              <SelectTrigger className="w-[180px] bg-white text-black">
                 <SelectValue placeholder="Select version" />
               </SelectTrigger>
               <SelectContent>
@@ -150,7 +152,7 @@ export default function GeneratePage() {
               {showIn3D && skinURL ? (
                 <Skin3DViewer skinURL={skinURL} />
               ) : (
-                <p className="text-white/70">3D view will appear here</p>
+                <p className="text-white/70">3D view Status: off</p>
               )}
             </div>
           </div>

@@ -16,11 +16,13 @@ export default function GeneratePage() {
   const [imageData, setImageData] = useState<Uint8ClampedArray | null>(null)
   const [isGenerating, setIsGenerating] = useState<boolean>(false)
   const [showIn3D, setShowIn3D] = useState<boolean>(false)
+  const [generatorVersion, setGeneratorVersion] = useState<string>("v3") // Default to v3
 
   const generateSkin = async () => {
     try {
       setIsGenerating(true)
-      const session = await onnx.InferenceSession.create('/generator.onnx')
+      const modelPath = generatorVersion === "v3" ? '/generatorv3.onnx' : '/generatorv5.onnx'
+      const session = await onnx.InferenceSession.create(modelPath)
       
       // Generate random latent vector
       const latentVector = new Float32Array(128).map(() => Math.random() * 2 - 1)
@@ -117,16 +119,13 @@ export default function GeneratePage() {
               </Button>
             </div>
             
-            <Select>
+            <Select value={generatorVersion} onValueChange={setGeneratorVersion}>
               <SelectTrigger className="w-[180px] bg-white text-black">
-                <SelectValue placeholder="Select version" />
+                <SelectValue placeholder="Select generator version" />
               </SelectTrigger>
               <SelectContent>
-                {versions.map((version) => (
-                  <SelectItem key={version.value} value={version.value}>
-                    {version.label}
-                  </SelectItem>
-                ))}
+                <SelectItem value="v3">Generator v3</SelectItem>
+                <SelectItem value="v5">Generator v5</SelectItem>
               </SelectContent>
             </Select>
           </div>

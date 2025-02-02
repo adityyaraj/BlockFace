@@ -1,4 +1,4 @@
-# Peelskin.Ai: Minecraft skin generator
+# BlockFace: Minecraft skin generator
 
 ## Implementation
 Check out the hosted implementation: https://peelskin.vercel.app
